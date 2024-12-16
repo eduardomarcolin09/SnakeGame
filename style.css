@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e3f2fd;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    text-align: center; 
+    color: #00bcd4; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+}
+
+h1 i {
+    color: rgba(52, 87, 220, 0.5); 
+    margin: 0 8px; 
+}
+
+
+.container {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    background: #293447;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.5);
+}
+
+.detalhes-jogo {
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabuleiro {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: #212837;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.tabuleiro .cabeça {
+    background: #60cbff;
+    border-radius: 50%;
+}
+
+.tabuleiro .corpo {
+    background: #00bcd4;
+    border-radius: 50%;
+}
+
+.tabuleiro .comida {
+    background: #ff003d;
+    border-radius: 5px;
+}
+
+.controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.controles i {
+    flex-grow: 1;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+    width: 25%;
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
+
+.controles i:last-child {
+    border-right: none; /* Remove a borda do último ícone */
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .detalhes-jogo {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controles {
+        display: flex;
+    }
+
+    .controles i {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
